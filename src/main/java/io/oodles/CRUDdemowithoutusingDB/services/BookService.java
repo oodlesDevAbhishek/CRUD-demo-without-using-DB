@@ -37,6 +37,19 @@ public class BookService {
 	}
 	
 	
+	public Book deleteBook(int bookId) {
+		 Book b =null;
+		 for(int i=0; i <= listBooks.size(); i++){
+		        b = listBooks.get(i);
+		        if(b.getId() == bookId) {
+		        	listBooks.remove(listBooks.get(i));
+		 		   return b;
+		        }
+		    }
+		 return b;
+	}
+	
+	
 	
 	
 
