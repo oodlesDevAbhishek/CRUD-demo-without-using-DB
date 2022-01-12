@@ -20,6 +20,7 @@ public class BookService {
 			listBooks.add(new Book(3 ,"name03" ,"auth03" ,11230.0));
 		
 	}
+	
 	public List<Book> getAllBooks(){
 		return listBooks;
 	}
@@ -29,5 +30,14 @@ public class BookService {
 		book =listBooks.stream().filter(e->e.getId()== id).findFirst().get();
 		return book;
 	}
+	
+	public Book addBook(Book book) {
+		listBooks.add(book);
+		return book;
+	}
+	
+	
+	
+	
 
 }
