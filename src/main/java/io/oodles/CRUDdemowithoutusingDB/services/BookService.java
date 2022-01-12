@@ -49,6 +49,22 @@ public class BookService {
 		 return b;
 	}
 	
+
+	public Book updateBook(Book book, int id) {
+		Book b= null;
+		for(int i=0;i<=listBooks.size();i++) {
+			b=listBooks.get(i);
+			if(b.getId()==id) {
+				b.setBookName(book.getBookName());
+				b.setBookAuther(book.getBookAuther());
+				b.setBookPrice(book.getBookPrice());
+				return b;
+			}
+			
+		}
+		return b;
+	}
+	
 	
 	
 	
